@@ -142,3 +142,30 @@
 # PUT / PATCH 
 # 공통점 : 데이터 수정을 위해 사용 
 # 차이점 : 데이터 전체 교체 / 부분 교체
+
+## status code
+
+# 100 - 199 정보 코드
+
+# 200 - 299 성공 코드 
+# 200 - OK
+# 201 - Created POST, PUT 요청 이후 
+# 204 - No Content, 반환된 콘텐츠 없이 성공 
+
+# 300 - 399 리다이렉션 코드
+# 301 - Moved Permanently 요청한 리소스의 uri 가 변경 되었음.
+
+# 400 - 499 클라이언트 오류
+# 400 - Bad Request
+# 401 - Unauthorized 실패한 인증. 
+# 403 - Forbidden  콘텐츠 접근 권한이 없음. 401과 차이는 서버가 클라이언트가 누구인지 알고 있음. 
+# 404 - Not Found
+
+# 500 - 599 서버 오류 
+# 500 - Internal Server Error
+
+## HTTP Routing
+
+
+
+
