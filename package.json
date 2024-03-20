@@ -1,0 +1,22 @@
+{
+  "name": "study-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "eventemitterclass.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hobbit-coder-cpu/study-node.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hobbit-coder-cpu/study-node.js/issues"
+  },
+  "homepage": "https://github.com/hobbit-coder-cpu/study-node.js#readme",
+  "dependencies": {
+    "events": "^3.3.0"
+  }
+}

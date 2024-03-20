@@ -81,9 +81,5 @@
 # libuv에서 제공하는 이벤트 루프를 사용하여 비동기 작업 위임
 # libuv는 해당 비동기 작업이 OS커널에서 할수 있는 것인지, 아닌지(Thread Pool에서 처리)를 판단하여 비동기 함수를 처리. 처리 후 콜백 함수 호출
 
-## Event loop
 
-## setImmediate / setTimeout / setInterval / process.nextTick
-# setTimeout / setInterval - event loop, timer 단계에서 처리
-# setImmediate - event loop, check 단계에서 처리
-# process.nextTick - 이벤트 루프 시작시와 이벤트 루프의 각 단계 사이 
+
