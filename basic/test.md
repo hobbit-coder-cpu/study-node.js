@@ -164,7 +164,8 @@
 # 500 - 599 서버 오류 
 # 500 - Internal Server Error
 
-## HTTP Routing
+## middleware
+# 미들웨어 기능은 애플리케이션의 요청-응답 주기에서 요청 객체, 응답 객체 , next 미들웨어에 접근할수 있는 기능입니다. next 미들웨어 기능은 일반적으로 next라는 변수로 표시. 미들웨어 등록시 . app.use() 함수 사용. 다음 미들웨어로 이동시 next() 함수 호출
 
 
 
