@@ -1,7 +1,10 @@
-function getPosts(req, res) {
-    res,send('<div><h1>Post Title</h1><p>This is a post</p></div>')
+function getPost(req, res) {
+    res.render('posts', {
+        templateName: 'post'
+    })
 }
 
+
 module.exports = {
-    getPosts
+    getPost
 }
