@@ -1,35 +1,8 @@
 const PORT = 8080;
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const mongoose = require('mongoose');
 const uri =
   'mongodb+srv://MinJungWon:12341234@express-cluster.px0bkka.mongodb.net/?retryWrites=true&w=majority&appName=express-cluster';
-
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  },
-});
-
-async function run() {
-  try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db('admin').command({ ping: 1 });
-    console.log(
-      'Pinged your deployment. You successfully connected to MongoDB!'
-    );
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
-}
-run().catch(console.dir);
-
-//////////////////////////////////////////////
 const path = require('path');
 const express = require('express');
 const app = express();
@@ -47,6 +20,18 @@ app.set('views', path.join(__dirname, 'views'));
  *********************************************/
 // Returns middleware that only parses json and only looks at requests where the Content-Type header matches the type option
 app.use(express.json());
+
+async function connectMongoDB() {
+  try {
+    await mongoose.connect(uri);
+
+    console.log('mongodb connected!');
+  } catch (error) {
+    console.log('failed connect mongodb', error);
+  }
+}
+
+connectMongoDB();
 
 app.use((req, res, next) => {
   const start = Date.now();
